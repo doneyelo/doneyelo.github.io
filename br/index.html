@@ -270,12 +270,12 @@
 							<div class="inner" data-onvisible-trigger="1">
 								<div>
 									<div id="image25" class="image">
-										<a href="https://music.doneyelo.com" class="frame deferred" oncontextmenu="return false;" ondragstart="return false;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0NjAgMjg2IiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjI4NiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="../assets/images/image25.png" alt="Músicas, canções, artes e mensagens espirituais de &quot;doneyelo&quot;" title="music.doneyelo.com - Galeria de música de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
+										<a href="https://music.doneyelo.com" class="frame" oncontextmenu="return false;" ondragstart="return false;"><img src="../assets/images/image25.png" alt="Músicas, canções, artes e mensagens espirituais de &quot;doneyelo&quot;" title="music.doneyelo.com - Galeria de música de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
 									</div>
 								</div>
 								<div>
 									<div id="image41" class="image">
-										<a href="https://doneyelo.com" class="frame deferred" oncontextmenu="return false;" ondragstart="return false;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA1NDAgNTQwIiB3aWR0aD0iNTQwIiBoZWlnaHQ9IjU0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="../assets/images/image41.png" alt="Site Oficial de doneyelo" title="doneyelo.com - Site Oficial de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
+										<a href="https://doneyelo.com" class="frame" oncontextmenu="return false;" ondragstart="return false;"><img src="../assets/images/image41.png" alt="Site Oficial de doneyelo" title="doneyelo.com - Site Oficial de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
 									</div>
 								</div>
 							</div>
@@ -288,7 +288,7 @@
 								<h2 id="text01" class="style4"><span class="p">˗ˏˋ ✞ ˎˊ˗</span><span class="p">✡ DEUS É SALVAÇÃO! ✵</span><span class="p">ॐ</span></h2>
 								<p id="text122" class="style16">· · · — — — · · ·</p>
 								<div id="image19" class="image">
-									<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0NjAgMzc0IiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjM3NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="../assets/images/image19.png" alt="doneyelo karthikeya skanda" title="&quot;Pela Honra de minha Colômbia, Brasília!&quot;" oncontextmenu="return false;" ondragstart="return false;" /></span>
+									<span class="frame"><img src="../assets/images/image19.png" alt="doneyelo karthikeya skanda" title="&quot;Pela Honra de minha Colômbia, Brasília!&quot;" oncontextmenu="return false;" ondragstart="return false;" /></span>
 								</div>
 								<h3 id="text28" class="style10">&quot;Pela Honra de minha Colômbia, Brasília!&quot;</h3>
 							</div>
@@ -316,82 +316,12 @@
 			</div>
 		</div>
 		<script>
-// JavaScript simplificado para página independente (sem seções)
+// JavaScript simplificado para página independente
 (function() {
-
-	// Função para carregar imagens deferred
-	function loadDeferredImages() {
-		// Encontrar todas as imagens com data-src dentro de elementos .deferred
-		var deferredElements = document.querySelectorAll('.deferred');
-		
-		deferredElements.forEach(function(deferredEl) {
-			var img = deferredEl.querySelector('img[data-src]');
-			if (!img || !img.dataset.src || img.dataset.src === 'done') return;
-			
-			var src = img.dataset.src;
-			var imageContainer = img.closest('.image');
-			
-			console.log('Carregando imagem:', src); // Debug
-			
-			// Marcar como processado
-			img.dataset.src = 'done';
-			
-			// Preparar para carregamento
-			img.style.opacity = '0';
-			img.style.transition = 'opacity 0.5s ease-in-out';
-			
-			// Quando a imagem carregar
-			img.onload = function() {
-				console.log('Imagem carregada:', src); // Debug
-				img.style.opacity = '1';
-				if (imageContainer) {
-					imageContainer.classList.add('loaded');
-				}
-			};
-			
-			// Se houver erro no carregamento
-			img.onerror = function() {
-				console.error('Erro ao carregar imagem:', src); // Debug
-				// Tentar carregar sem o ../
-				if (src.startsWith('../')) {
-					img.src = src.substring(3);
-				}
-			};
-			
-			// Carregar a imagem
-			img.src = src;
-		});
-	}
-
-	// Função alternativa: carregar todas as imagens deferred diretamente
-	function forceLoadDeferredImages() {
-		var imgs = document.querySelectorAll('img[data-src]');
-		imgs.forEach(function(img) {
-			if (img.dataset.src && img.dataset.src !== 'done') {
-				var src = img.dataset.src;
-				img.dataset.src = 'done';
-				img.style.opacity = '0';
-				img.style.transition = 'opacity 0.5s ease-in-out';
-				
-				img.onload = function() {
-					img.style.opacity = '1';
-				};
-				
-				img.src = src;
-			}
-		});
-	}
-
-	// Quando o DOM estiver pronto
+	// Remover classe de loading quando página carregar
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', function() {
 			document.body.classList.remove('is-loading');
-			
-			// Tentar ambas as abordagens
-			setTimeout(function() {
-				loadDeferredImages();
-				setTimeout(forceLoadDeferredImages, 500);
-			}, 100);
 			
 			// Limpar hash da URL se existir
 			if (window.location.hash) {
@@ -400,15 +330,12 @@
 		});
 	} else {
 		document.body.classList.remove('is-loading');
-		loadDeferredImages();
-		setTimeout(forceLoadDeferredImages, 500);
 		
 		// Limpar hash da URL se existir
 		if (window.location.hash) {
 			history.replaceState(null, null, window.location.pathname);
 		}
 	}
-
 })();
 		</script>
 	</body>
