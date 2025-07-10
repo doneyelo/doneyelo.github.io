@@ -4,11 +4,7 @@
 		<title>⚜️ doneyelo | Brasil 🦚</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<meta name="color-schem										<div id="image28" class="image">
-									<span class="frame"><img src="assets/images/image28.png" alt="Yggdrasil" title="3" oncontextmenu="return false;" ondragstart="return false;" /></span>
-								</div>			<div id="image27" class="image">
-									<span class="frame"><img src="assets/images/image27.png" alt="Yggdrasil" title="2" oncontextmenu="return false;" ondragstart="return false;" /></span>
-								</div>content="light only" />
+		<meta name="color-scheme" content="light only" />
 		<meta name="description" content="«Pela Honra de Colômbia, Brasília!»" />
 		<meta property="og:site_name" content="⚜️ doneyelo 🦚" />
 		<meta property="og:title" content="⚜️ doneyelo 🦚" />
@@ -331,6 +327,17 @@
 			
 			// Previne adição de hash ao clicar em links internos
 			document.addEventListener('DOMContentLoaded', function() {
+				// Intercepta erros de rede e silencia erros conhecidos
+				window.addEventListener('error', function(e) {
+					const errorUrl = e.target?.src || e.target?.href || '';
+					if (errorUrl.includes('/done') || errorUrl.includes('/undefined') || 
+					    errorUrl.includes('image27') || errorUrl.includes('image28')) {
+						e.preventDefault();
+						console.log('Erro conhecido interceptado:', errorUrl);
+						return false;
+					}
+				}, true);
+				
 				// Corrige possíveis problemas com elementos null no main.js
 				const deferredImages = document.querySelectorAll('img[data-src]');
 				
@@ -343,6 +350,7 @@
 								if (img.dataset.src) {
 									img.src = img.dataset.src;
 									img.removeAttribute('data-src');
+									img.classList.remove('deferred');
 									observer.unobserve(img);
 								}
 							}
@@ -356,6 +364,7 @@
 						if (img.dataset.src) {
 							img.src = img.dataset.src;
 							img.removeAttribute('data-src');
+							img.classList.remove('deferred');
 						}
 					});
 				}
