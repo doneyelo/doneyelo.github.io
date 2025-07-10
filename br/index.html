@@ -15,6 +15,24 @@
 		<link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
 		<link rel="stylesheet" href="../assets/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/noscript.css" /></noscript>
+		
+		<!-- CSS mínimo para garantir quebra correta 7+6 nos ícones de streaming -->
+		<style>
+		/* Forçar quebra de linha específica para mobile nos ícones de streaming */
+		@media (max-width: 736px) {
+			#icons13.icons.style3 {
+				gap: 1.125rem !important;
+				font-size: 1.2em !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#icons13.icons.style3 {
+				gap: 0.9rem !important;
+				font-size: 1em !important;
+			}
+		}
+		</style>
 	</head>
 	<body class="is-loading">
 		<div id="wrapper">
