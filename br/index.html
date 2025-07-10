@@ -273,12 +273,12 @@
 							<div class="inner" data-onvisible-trigger="1">
 								<div>
 									<div id="image25" class="image">
-										<a href="https://music.doneyelo.com" class="frame deferred" oncontextmenu="return false;" ondragstart="return false;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0NjAgMjg2IiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjI4NiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/image25.png" alt="Músicas, canções, artes e mensagens espirituais de &quot;doneyelo&quot;" title="music.doneyelo.com - Galeria de música de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
+										<a href="https://music.doneyelo.com" class="frame" oncontextmenu="return false;" ondragstart="return false;"><img src="assets/images/image25.png" alt="Músicas, canções, artes e mensagens espirituais de &quot;doneyelo&quot;" title="music.doneyelo.com - Galeria de música de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
 									</div>
 								</div>
 								<div>
 									<div id="image41" class="image">
-										<a href="https://doneyelo.com" class="frame deferred" oncontextmenu="return false;" ondragstart="return false;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA1NDAgNTQwIiB3aWR0aD0iNTQwIiBoZWlnaHQ9IjU0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/image41.png" alt="Site Oficial de doneyelo" title="doneyelo.com - Site Oficial de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
+										<a href="https://doneyelo.com" class="frame" oncontextmenu="return false;" ondragstart="return false;"><img src="assets/images/image41.png" alt="Site Oficial de doneyelo" title="doneyelo.com - Site Oficial de doneyelo" oncontextmenu="return false;" ondragstart="return false;" /></a>
 									</div>
 								</div>
 							</div>
@@ -291,7 +291,7 @@
 								<h2 id="text01" class="style4"><span class="p">˗ˏˋ ✞ ˎˊ˗</span><span class="p">✡ DEUS É SALVAÇÃO! ✵</span><span class="p">ॐ</span></h2>
 								<p id="text122" class="style16">· · · — — — · · ·</p>
 								<div id="image19" class="image">
-									<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0NjAgMzc0IiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjM3NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/image19.png" alt="doneyelo karthikeya skanda" title="&quot;Pela Honra de minha Colômbia, Brasília!&quot;" oncontextmenu="return false;" ondragstart="return false;" /></span>
+									<span class="frame"><img src="assets/images/image19.png" alt="doneyelo karthikeya skanda" title="&quot;Pela Honra de minha Colômbia, Brasília!&quot;" oncontextmenu="return false;" ondragstart="return false;" /></span>
 								</div>
 								<h3 id="text28" class="style10">&quot;Pela Honra de minha Colômbia, Brasília!&quot;</h3>
 							</div>
@@ -325,65 +325,18 @@
 				history.replaceState('', document.title, window.location.pathname + window.location.search);
 			}
 			
-			// Força o carregamento imediato das imagens diferidas
-			document.addEventListener('DOMContentLoaded', function() {
-				// Intercepta erros de rede e silencia erros conhecidos
-				window.addEventListener('error', function(e) {
-					const errorUrl = e.target?.src || e.target?.href || '';
-					if (errorUrl.includes('/done') || errorUrl.includes('/undefined') || 
-					    errorUrl.includes('image27') || errorUrl.includes('image28')) {
-						e.preventDefault();
-						console.log('Erro conhecido interceptado:', errorUrl);
-						return false;
-					}
-				}, true);
-				
-				// Força carregamento imediato de todas as imagens com data-src
-				const deferredImages = document.querySelectorAll('img[data-src]');
-				console.log('Imagens diferidas encontradas:', deferredImages.length);
-				
-				deferredImages.forEach((img, index) => {
-					const dataSrc = img.getAttribute('data-src');
-					console.log(`Carregando imagem ${index + 1}:`, dataSrc);
-					
-					if (dataSrc) {
-						// Força o carregamento imediato
-						img.src = dataSrc;
-						img.removeAttribute('data-src');
-						
-						// Remove classes de carregamento diferido
-						img.classList.remove('deferred');
-						const parent = img.closest('.frame');
-						if (parent) {
-							parent.classList.remove('deferred');
-						}
-						
-						// Confirma quando a imagem carrega
-						img.onload = function() {
-							console.log('Imagem carregada com sucesso:', dataSrc);
-						};
-						
-						img.onerror = function() {
-							console.error('Erro ao carregar imagem:', dataSrc);
-						};
-					}
-				});
-				
-				// Backup: Tenta novamente após 1 segundo se algo não carregou
-				setTimeout(() => {
-					const stillDeferred = document.querySelectorAll('img[data-src]');
-					if (stillDeferred.length > 0) {
-						console.log('Tentativa de backup para', stillDeferred.length, 'imagens');
-						stillDeferred.forEach(img => {
-							const dataSrc = img.getAttribute('data-src');
-							if (dataSrc) {
-								img.src = dataSrc;
-								img.removeAttribute('data-src');
-							}
-						});
-					}
-				}, 1000);
-			});
+			// Intercepta erros de rede e silencia erros conhecidos
+			window.addEventListener('error', function(e) {
+				const errorUrl = e.target?.src || e.target?.href || '';
+				if (errorUrl.includes('/done') || errorUrl.includes('/undefined') || 
+				    errorUrl.includes('image27') || errorUrl.includes('image28')) {
+					e.preventDefault();
+					console.log('Erro conhecido interceptado:', errorUrl);
+					return false;
+				}
+			}, true);
+			
+			console.log('Site carregado com sucesso!');
 		</script>
 	</body>
 </html>
