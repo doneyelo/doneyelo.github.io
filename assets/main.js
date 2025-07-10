@@ -826,7 +826,9 @@
 					if (!section || section.tagName != 'SECTION')
 						return;
 		
-					location.href = '#' + section.id.replace(/-section$/, '');
+					if (section.id) {
+						location.href = '#' + section.id.replace(/-section$/, '');
+					}
 		
 				},
 				doPreviousSection = function() {
@@ -838,7 +840,9 @@
 					if (!section || section.tagName != 'SECTION')
 						return;
 		
-					location.href = '#' + (section.matches(':first-child') ? '' : section.id.replace(/-section$/, ''));
+					if (section.id) {
+						location.href = '#' + (section.matches(':first-child') ? '' : section.id.replace(/-section$/, ''));
+					}
 		
 				},
 				doFirstSection = function() {
@@ -850,7 +854,9 @@
 					if (!section || section.tagName != 'SECTION')
 						return;
 		
-					location.href = '#' + section.id.replace(/-section$/, '');
+					if (section.id) {
+						location.href = '#' + section.id.replace(/-section$/, '');
+					}
 		
 				},
 				doLastSection = function() {
@@ -862,7 +868,9 @@
 					if (!section || section.tagName != 'SECTION')
 						return;
 		
-					location.href = '#' + section.id.replace(/-section$/, '');
+					if (section.id) {
+						location.href = '#' + section.id.replace(/-section$/, '');
+					}
 		
 				},
 				resetSectionChangeElements = function(section) {
@@ -905,7 +913,7 @@
 						if (!section.classList.contains('inactive')) {
 		
 							// Get options.
-								name = (section ? section.id.replace(/-section$/, '') : null);
+								name = (section && section.id ? section.id.replace(/-section$/, '') : null);
 								disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
 		
 							// Scroll to scroll point (if applicable).
@@ -932,7 +940,7 @@
 									history.replaceState(null, null, '#');
 		
 							// Get options.
-								name = (section ? section.id.replace(/-section$/, '') : null);
+								name = (section && section.id ? section.id.replace(/-section$/, '') : null);
 								hideHeader = name ? ((name in sections) && ('hideHeader' in sections[name]) && sections[name].hideHeader) : false;
 								hideFooter = name ? ((name in sections) && ('hideFooter' in sections[name]) && sections[name].hideFooter) : false;
 								disableAutoScroll = name ? ((name in sections) && ('disableAutoScroll' in sections[name]) && sections[name].disableAutoScroll) : false;
@@ -1050,14 +1058,16 @@
 						if (!!(section = $('section.active'))) {
 		
 							// Get name.
-								id = section.id.replace(/-section$/, '');
+								if (section.id) {
+									id = section.id.replace(/-section$/, '');
 		
-								// Index section? Clear.
-									if (id == 'home')
-										id = '';
+									// Index section? Clear.
+										if (id == 'home')
+											id = '';
 		
-							// Reset hash to section name (via new state).
-								history.pushState(null, null, '#' + id);
+									// Reset hash to section name (via new state).
+										history.pushState(null, null, '#' + id);
+								}
 		
 						}
 		
@@ -1088,7 +1098,9 @@
 		
 								initialScrollPoint = e;
 								initialSection = initialScrollPoint.parentElement;
-								initialId = initialSection.id;
+								if (initialSection) {
+									initialId = initialSection.id;
+								}
 		
 							}
 		
@@ -1097,7 +1109,9 @@
 		
 								initialScrollPoint = null;
 								initialSection = e;
-								initialId = initialSection.id;
+								if (initialSection) {
+									initialId = initialSection.id;
+								}
 		
 							}
 		
@@ -1107,7 +1121,13 @@
 								// Default to index.
 									initialScrollPoint = null;
 									initialSection = $('#' + 'home' + '-section');
-									initialId = initialSection.id;
+									
+									// If home-section doesn't exist, skip section-based functionality
+									if (initialSection) {
+										initialId = initialSection.id;
+									} else {
+										initialId = null;
+									}
 		
 								// Clear index URL hash.
 									history.replaceState(undefined, undefined, '#');
@@ -1296,7 +1316,9 @@
 											if (section.classList.contains('inactive')) {
 		
 												// Reset hash to section name (via new state).
-													history.pushState(null, null, '#' + section.id.replace(/-section$/, ''));
+													if (section.id) {
+														history.pushState(null, null, '#' + section.id.replace(/-section$/, ''));
+													}
 		
 												// Activate section.
 													activateSection(section, scrollPoint);
