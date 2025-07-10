@@ -69,73 +69,70 @@
 										</li>
 									</ul>
 									<p id="text34" class="style38">· · · — — — · · ·</p>
-									<ul id="icons12" class="style3 icons">
+									<ul id="icons04" class="style3 icons">
 										<li>
 											<a class="n01" href="https://open.spotify.com/artist/5fI7OZLicVxPw7wvh01dD1" role="button">
-												<svg aria-labelledby="icons12-icon-1-title"><title id="icons12-icon-1-title">Spotify</title><use xlink:href="assets/icons.svg#spotify"></use></svg>
+												<svg aria-labelledby="icons04-icon-1-title"><title id="icons04-icon-1-title">Spotify</title><use xlink:href="assets/icons.svg#spotify"></use></svg>
 												<span class="label">Spotify</span>
 											</a>
 										</li><li>
 											<a class="n02" href="https://www.deezer.com/br/artist/310226821" role="button">
-												<svg aria-labelledby="icons12-icon-2-title"><title id="icons12-icon-2-title">Deezer</title><use xlink:href="assets/icons.svg#deezer"></use></svg>
+												<svg aria-labelledby="icons04-icon-2-title"><title id="icons04-icon-2-title">Deezer</title><use xlink:href="assets/icons.svg#deezer"></use></svg>
 												<span class="label">Deezer</span>
 											</a>
 										</li><li>
 											<a class="n03" href="https://music.youtube.com/watch?v=bRlQeH6Ouvo&feature=shared" role="button">
-												<svg aria-labelledby="icons12-icon-3-title"><title id="icons12-icon-3-title">YouTube Music</title><use xlink:href="assets/icons.svg#youtube-music"></use></svg>
+												<svg aria-labelledby="icons04-icon-3-title"><title id="icons04-icon-3-title">YouTube Music</title><use xlink:href="assets/icons.svg#youtube-music"></use></svg>
 												<span class="label">YouTube Music</span>
 											</a>
 										</li><li>
 											<a class="n04" href="https://music.apple.com/br/artist/doneyelo/1802588987" role="button">
-												<svg aria-labelledby="icons12-icon-4-title"><title id="icons12-icon-4-title">Apple</title><use xlink:href="assets/icons.svg#apple"></use></svg>
+												<svg aria-labelledby="icons04-icon-4-title"><title id="icons04-icon-4-title">Apple</title><use xlink:href="assets/icons.svg#apple"></use></svg>
 												<span class="label">Apple</span>
 											</a>
 										</li><li>
 											<a class="n05" href="https://music.amazon.com/artists/B0F1N9P2JG/doneyelo?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_XHKX8JawqdJIqhgbRW5JWMwa1" role="button">
-												<svg aria-labelledby="icons12-icon-5-title"><title id="icons12-icon-5-title">Amazon Music</title><use xlink:href="assets/icons.svg#amazon-music"></use></svg>
+												<svg aria-labelledby="icons04-icon-5-title"><title id="icons04-icon-5-title">Amazon Music</title><use xlink:href="assets/icons.svg#amazon-music"></use></svg>
 												<span class="label">Amazon Music</span>
 											</a>
 										</li><li>
 											<a class="n06" href="https://tidal.com/browse/artist/55597234/u" role="button">
-												<svg aria-labelledby="icons12-icon-6-title"><title id="icons12-icon-6-title">Tidal</title><use xlink:href="assets/icons.svg#tidal"></use></svg>
+												<svg aria-labelledby="icons04-icon-6-title"><title id="icons04-icon-6-title">Tidal</title><use xlink:href="assets/icons.svg#tidal"></use></svg>
 												<span class="label">Tidal</span>
 											</a>
 										</li><li>
 											<a class="n07" href="https://play.anghami.com/artist/23921608" role="button">
-												<svg aria-labelledby="icons12-icon-7-title"><title id="icons12-icon-7-title">Anghami</title><use xlink:href="assets/icons.svg#anghami"></use></svg>
+												<svg aria-labelledby="icons04-icon-7-title"><title id="icons04-icon-7-title">Anghami</title><use xlink:href="assets/icons.svg#anghami"></use></svg>
 												<span class="label">Anghami</span>
 											</a>
-										</li>
-									</ul>
-									<ul id="icons04" class="style3 icons">
-										<li>
-											<a class="n01" href="https://soundcloud.com/doneyelo" role="button">
-												<svg aria-labelledby="icons04-icon-1-title"><title id="icons04-icon-1-title">SoundCloud</title><use xlink:href="assets/icons.svg#soundcloud"></use></svg>
+										</li><li>
+											<a class="n08" href="https://soundcloud.com/doneyelo" role="button">
+												<svg aria-labelledby="icons04-icon-8-title"><title id="icons04-icon-8-title">SoundCloud</title><use xlink:href="assets/icons.svg#soundcloud"></use></svg>
 												<span class="label">SoundCloud</span>
 											</a>
 										</li><li>
-											<a class="n02" href="https://www.pandora.com/artist/doneyelo/AR7m3rcjJmqgn4P" role="button">
-												<svg aria-labelledby="icons04-icon-2-title"><title id="icons04-icon-2-title">Pandora</title><use xlink:href="assets/icons.svg#pandora"></use></svg>
+											<a class="n09" href="https://www.pandora.com/artist/doneyelo/AR7m3rcjJmqgn4P" role="button">
+												<svg aria-labelledby="icons04-icon-9-title"><title id="icons04-icon-9-title">Pandora</title><use xlink:href="assets/icons.svg#pandora"></use></svg>
 												<span class="label">Pandora</span>
 											</a>
 										</li><li>
-											<a class="n03" href="https://www.kkbox.com/sg/en/song/D-ON66QWldMikc8R3w" role="button">
-												<svg aria-labelledby="icons04-icon-3-title"><title id="icons04-icon-3-title">KKBOX</title><use xlink:href="assets/icons.svg#kkbox"></use></svg>
+											<a class="n10" href="https://www.kkbox.com/sg/en/song/D-ON66QWldMikc8R3w" role="button">
+												<svg aria-labelledby="icons04-icon-10-title"><title id="icons04-icon-10-title">KKBOX</title><use xlink:href="assets/icons.svg#kkbox"></use></svg>
 												<span class="label">KKBOX</span>
 											</a>
 										</li><li>
-											<a class="n04" href="https://www.jiosaavn.com/artist/doneyelo-songs/Du6vOzvZHXU_" role="button">
-												<svg aria-labelledby="icons04-icon-4-title"><title id="icons04-icon-4-title">JioSaavn</title><use xlink:href="assets/icons.svg#jiosaavn"></use></svg>
+											<a class="n11" href="https://www.jiosaavn.com/artist/doneyelo-songs/Du6vOzvZHXU_" role="button">
+												<svg aria-labelledby="icons04-icon-11-title"><title id="icons04-icon-11-title">JioSaavn</title><use xlink:href="assets/icons.svg#jiosaavn"></use></svg>
 												<span class="label">JioSaavn</span>
 											</a>
 										</li><li>
-											<a class="n05" href="https://www.boomplay.com/artists/107943350" role="button">
-												<svg aria-labelledby="icons04-icon-5-title"><title id="icons04-icon-5-title">Boomplay</title><use xlink:href="assets/icons.svg#boomplay"></use></svg>
+											<a class="n12" href="https://www.boomplay.com/artists/107943350" role="button">
+												<svg aria-labelledby="icons04-icon-12-title"><title id="icons04-icon-12-title">Boomplay</title><use xlink:href="assets/icons.svg#boomplay"></use></svg>
 												<span class="label">Boomplay</span>
 											</a>
 										</li><li>
-											<a class="n06" href="https://audiomack.doneyelo.com" role="button">
-												<svg aria-labelledby="icons04-icon-6-title"><title id="icons04-icon-6-title">Audiomack</title><use xlink:href="assets/icons.svg#audiomack"></use></svg>
+											<a class="n13" href="https://audiomack.doneyelo.com" role="button">
+												<svg aria-labelledby="icons04-icon-13-title"><title id="icons04-icon-13-title">Audiomack</title><use xlink:href="assets/icons.svg#audiomack"></use></svg>
 												<span class="label">Audiomack</span>
 											</a>
 										</li>
@@ -144,40 +141,40 @@
 								</div>
 							</div>
 						</div>
-						<div id="container08" class="container columns">
+						<div id="container40" class="container columns">
 							<div class="wrapper">
 								<div class="inner" data-onvisible-trigger="1">
 									<div>
-										<ul id="links15" class="links">
+										<ul id="links44" class="links">
 											<li class="n01">
 												<a href="https://music.doneyelo.com">MUSIC</a>
 											</li>
 										</ul>
-										<ul id="links58" class="links">
+										<ul id="links45" class="links">
 											<li class="n01">
 												<a href="https://music.doneyelo.com">music.doneyelo.com</a>
 											</li>
 										</ul>
 									</div>
 									<div>
-										<ul id="links94" class="links">
+										<ul id="links46" class="links">
 											<li class="n01">
 												<a href="https://video.doneyelo.com">VIDEO</a>
 											</li>
 										</ul>
-										<ul id="links101" class="links">
+										<ul id="links47" class="links">
 											<li class="n01">
 												<a href="https://video.doneyelo.com">video.doneyelo.com</a>
 											</li>
 										</ul>
 									</div>
 									<div>
-										<ul id="links102" class="links">
+										<ul id="links48" class="links">
 											<li class="n01">
 												<a href="https://shows.doneyelo.com">SHOWS</a>
 											</li>
 										</ul>
-										<ul id="links103" class="links">
+										<ul id="links49" class="links">
 											<li class="n01">
 												<a href="https://shows.doneyelo.com">shows.doneyelo.com</a>
 											</li>
@@ -566,48 +563,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="container40" class="container columns">
-							<div class="wrapper">
-								<div class="inner" data-onvisible-trigger="1">
-									<div>
-										<ul id="links44" class="links">
-											<li class="n01">
-												<a href="https://music.doneyelo.com">MUSIC</a>
-											</li>
-										</ul>
-										<ul id="links45" class="links">
-											<li class="n01">
-												<a href="https://music.doneyelo.com">music.doneyelo.com</a>
-											</li>
-										</ul>
-									</div>
-									<div>
-										<ul id="links46" class="links">
-											<li class="n01">
-												<a href="https://video.doneyelo.com">VIDEO</a>
-											</li>
-										</ul>
-										<ul id="links47" class="links">
-											<li class="n01">
-												<a href="https://video.doneyelo.com">video.doneyelo.com</a>
-											</li>
-										</ul>
-									</div>
-									<div>
-										<ul id="links48" class="links">
-											<li class="n01">
-												<a href="https://shows.doneyelo.com">SHOWS</a>
-											</li>
-										</ul>
-										<ul id="links49" class="links">
-											<li class="n01">
-												<a href="https://shows.doneyelo.com">shows.doneyelo.com</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+						<hr id="divider50" class="style4 full">
 						<div id="container75" class="container columns">
 							<div class="wrapper">
 								<div class="inner" data-onvisible-trigger="1">
@@ -717,6 +673,9 @@
 						</div>
 						<hr id="divider21" class="style4 full">
 					</section>
+<<<<<<< HEAD
+					
+=======
 					<section id="br-section" data-title="BR •󠁏󠁏 Brasil">
 						<ul id="links02" class="links">
 							<li class="n01">
@@ -1010,6 +969,7 @@
 						</div>
 						<hr id="divider12" class="style4 full">
 					</section>
+>>>>>>> e945d95cb590680b8cc1abb64b7491644d47a7c5
 					<section id="es-section" data-title="ES •󠁏󠁏 Español">
 						<ul id="links28" class="links">
 							<li class="n01">
