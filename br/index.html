@@ -321,13 +321,17 @@
 
 	// Função para carregar imagens deferred
 	function loadDeferredImages() {
-		var items = document.querySelectorAll('.deferred img[data-src]');
+		// Encontrar todas as imagens com data-src dentro de elementos .deferred
+		var deferredElements = document.querySelectorAll('.deferred');
 		
-		items.forEach(function(img) {
-			if (!img.dataset.src || img.dataset.src === 'done') return;
+		deferredElements.forEach(function(deferredEl) {
+			var img = deferredEl.querySelector('img[data-src]');
+			if (!img || !img.dataset.src || img.dataset.src === 'done') return;
 			
 			var src = img.dataset.src;
-			var parent = img.closest('.deferred');
+			var imageContainer = img.closest('.image');
+			
+			console.log('Carregando imagem:', src); // Debug
 			
 			// Marcar como processado
 			img.dataset.src = 'done';
@@ -338,9 +342,19 @@
 			
 			// Quando a imagem carregar
 			img.onload = function() {
+				console.log('Imagem carregada:', src); // Debug
 				img.style.opacity = '1';
-				if (parent) {
-					parent.classList.remove('loading');
+				if (imageContainer) {
+					imageContainer.classList.add('loaded');
+				}
+			};
+			
+			// Se houver erro no carregamento
+			img.onerror = function() {
+				console.error('Erro ao carregar imagem:', src); // Debug
+				// Tentar carregar sem o ../
+				if (src.startsWith('../')) {
+					img.src = src.substring(3);
 				}
 			};
 			
@@ -349,11 +363,35 @@
 		});
 	}
 
+	// Função alternativa: carregar todas as imagens deferred diretamente
+	function forceLoadDeferredImages() {
+		var imgs = document.querySelectorAll('img[data-src]');
+		imgs.forEach(function(img) {
+			if (img.dataset.src && img.dataset.src !== 'done') {
+				var src = img.dataset.src;
+				img.dataset.src = 'done';
+				img.style.opacity = '0';
+				img.style.transition = 'opacity 0.5s ease-in-out';
+				
+				img.onload = function() {
+					img.style.opacity = '1';
+				};
+				
+				img.src = src;
+			}
+		});
+	}
+
 	// Quando o DOM estiver pronto
 	if (document.readyState === 'loading') {
 		document.addEventListener('DOMContentLoaded', function() {
 			document.body.classList.remove('is-loading');
-			setTimeout(loadDeferredImages, 100);
+			
+			// Tentar ambas as abordagens
+			setTimeout(function() {
+				loadDeferredImages();
+				setTimeout(forceLoadDeferredImages, 500);
+			}, 100);
 			
 			// Limpar hash da URL se existir
 			if (window.location.hash) {
@@ -363,6 +401,7 @@
 	} else {
 		document.body.classList.remove('is-loading');
 		loadDeferredImages();
+		setTimeout(forceLoadDeferredImages, 500);
 		
 		// Limpar hash da URL se existir
 		if (window.location.hash) {
