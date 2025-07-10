@@ -325,7 +325,7 @@
 				history.replaceState('', document.title, window.location.pathname + window.location.search);
 			}
 			
-			// Previne adição de hash ao clicar em links internos
+			// Força o carregamento imediato das imagens diferidas
 			document.addEventListener('DOMContentLoaded', function() {
 				// Intercepta erros de rede e silencia erros conhecidos
 				window.addEventListener('error', function(e) {
@@ -338,36 +338,51 @@
 					}
 				}, true);
 				
-				// Corrige possíveis problemas com elementos null no main.js
+				// Força carregamento imediato de todas as imagens com data-src
 				const deferredImages = document.querySelectorAll('img[data-src]');
+				console.log('Imagens diferidas encontradas:', deferredImages.length);
 				
-				// Observer para carregamento das imagens diferidas
-				if ('IntersectionObserver' in window) {
-					const imageObserver = new IntersectionObserver((entries, observer) => {
-						entries.forEach(entry => {
-							if (entry.isIntersecting) {
-								const img = entry.target;
-								if (img.dataset.src) {
-									img.src = img.dataset.src;
-									img.removeAttribute('data-src');
-									img.classList.remove('deferred');
-									observer.unobserve(img);
-								}
+				deferredImages.forEach((img, index) => {
+					const dataSrc = img.getAttribute('data-src');
+					console.log(`Carregando imagem ${index + 1}:`, dataSrc);
+					
+					if (dataSrc) {
+						// Força o carregamento imediato
+						img.src = dataSrc;
+						img.removeAttribute('data-src');
+						
+						// Remove classes de carregamento diferido
+						img.classList.remove('deferred');
+						const parent = img.closest('.frame');
+						if (parent) {
+							parent.classList.remove('deferred');
+						}
+						
+						// Confirma quando a imagem carrega
+						img.onload = function() {
+							console.log('Imagem carregada com sucesso:', dataSrc);
+						};
+						
+						img.onerror = function() {
+							console.error('Erro ao carregar imagem:', dataSrc);
+						};
+					}
+				});
+				
+				// Backup: Tenta novamente após 1 segundo se algo não carregou
+				setTimeout(() => {
+					const stillDeferred = document.querySelectorAll('img[data-src]');
+					if (stillDeferred.length > 0) {
+						console.log('Tentativa de backup para', stillDeferred.length, 'imagens');
+						stillDeferred.forEach(img => {
+							const dataSrc = img.getAttribute('data-src');
+							if (dataSrc) {
+								img.src = dataSrc;
+								img.removeAttribute('data-src');
 							}
 						});
-					});
-					
-					deferredImages.forEach(img => imageObserver.observe(img));
-				} else {
-					// Fallback para navegadores sem suporte ao IntersectionObserver
-					deferredImages.forEach(img => {
-						if (img.dataset.src) {
-							img.src = img.dataset.src;
-							img.removeAttribute('data-src');
-							img.classList.remove('deferred');
-						}
-					});
-				}
+					}
+				}, 1000);
 			});
 		</script>
 	</body>
