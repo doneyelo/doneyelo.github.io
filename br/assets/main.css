@@ -693,11 +693,11 @@ h1.style14 span.p:nth-child(n + 2), h2.style14 span.p:nth-child(n + 2), h3.style
 }
 
 h1.style16:not(:first-child), h2.style16:not(:first-child), h3.style16:not(:first-child), p.style16:not(:first-child) {
-	margin-top: 1rem !important;
+	margin-top: 0rem !important;
 }
 
 h1.style16:not(:last-child), h2.style16:not(:last-child), h3.style16:not(:last-child), p.style16:not(:last-child) {
-	margin-bottom: 1rem !important;
+	margin-bottom: 0rem !important;
 }
 
 h1.style16, h2.style16, h3.style16, p.style16 {
@@ -777,18 +777,18 @@ h1.style33 span.p, h2.style33 span.p, h3.style33 span.p, p.style33 span.p {
 }
 
 h1.style29:not(:first-child), h2.style29:not(:first-child), h3.style29:not(:first-child), p.style29:not(:first-child) {
-	margin-top: 0rem !important;
+	margin-top: 0.75rem !important;
 }
 
 h1.style29:not(:last-child), h2.style29:not(:last-child), h3.style29:not(:last-child), p.style29:not(:last-child) {
-	margin-bottom: 0rem !important;
+	margin-bottom: 0.75rem !important;
 }
 
 h1.style29, h2.style29, h3.style29, p.style29 {
 	color: #FFCB00;
 	font-family: 'Imprima', sans-serif;
-	padding-left: calc(6rem * var(--indent-left));
-	padding-right: calc(6rem * var(--indent-right));
+	padding-left: calc(3.625rem * var(--indent-left));
+	padding-right: calc(3.625rem * var(--indent-right));
 	font-size: 1em;
 	line-height: 1.25;
 	font-weight: 400;
@@ -1679,7 +1679,7 @@ hr.style1:before {
 }
 
 .container.style2 > .wrapper > .inner {
-	--gutters: calc(var(--padding-horizontal) * 2);
+	--gutters: 0rem;
 	--padding-horizontal: 0rem;
 	--padding-vertical: 1rem;
 	--spacing: 0rem;
@@ -1798,15 +1798,15 @@ hr.style1:before {
 }
 
 #container41 > .wrapper > .inner > :nth-child(1) {
-	width: calc(33.33333% + (var(--gutters) / 3));
+	width: 33.33333%;
 }
 
 #container41 > .wrapper > .inner > :nth-child(2) {
-	width: calc(33.33333% + (var(--gutters) / 3));
+	width: 33.33333%;
 }
 
 #container41 > .wrapper > .inner > :nth-child(3) {
-	width: calc(33.33333% + (var(--gutters) / 3));
+	width: 33.33333%;
 }
 
 .container.style10 {
@@ -2094,7 +2094,7 @@ hr.style1:before {
 }
 
 #container35 > .wrapper > .inner > :nth-child(1) {
-	width: calc(50% + (var(--gutters) / 2));
+	width: 50%;
 	--alignment: right;
 	--flex-alignment: flex-end;
 	--indent-left: 0;
@@ -2104,7 +2104,7 @@ hr.style1:before {
 }
 
 #container35 > .wrapper > .inner > :nth-child(2) {
-	width: calc(50% + (var(--gutters) / 2));
+	width: 50%;
 }
 
 #container50 {
@@ -2459,18 +2459,18 @@ hr.style1:before {
 	display: inline-flex;
 	width: auto;
 	height: auto;
-	line-height: 1rem;
-	padding: 0 0.75rem;
+	line-height: 1.5rem;
+	padding: 0 0.625rem;
 	vertical-align: middle;
-	font-family: 'Arimo', sans-serif;
+	font-family: 'Courier New', monospace;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 700;
 	border-radius: 0.625rem;
 	box-shadow: 0rem 0rem 0.25rem 0.125rem #FFCB00;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
-	padding-bottom: 0.46875rem;
-	padding-top: 0.46875rem;
+	padding-bottom: 0.390625rem;
+	padding-top: 0.390625rem;
 	white-space: normal;
 	align-items: flex-start;
 	transition: transform 0.375s ease, color 0.375s ease, background-color 0.375s ease, border-color 0.375s ease;
@@ -2481,7 +2481,7 @@ hr.style1:before {
 	fill: #000000;
 	flex-grow: 0;
 	flex-shrink: 0;
-	height: 1rem;
+	height: 1.5rem;
 	min-width: 16px;
 	pointer-events: none;
 	width: 1em;
@@ -2714,8 +2714,8 @@ hr.style1:before {
 	#text102 {
 		letter-spacing: 0rem;
 		width: 100%;
-		font-size: 1em;
-		line-height: 1.75;
+		font-size: 0.875em;
+		line-height: 1.875;
 	}
 	
 	h1.style45:not(:first-child), h2.style45:not(:first-child), h3.style45:not(:first-child), p.style45:not(:first-child) {
@@ -2839,11 +2839,11 @@ hr.style1:before {
 	}
 	
 	h1.style16:not(:first-child), h2.style16:not(:first-child), h3.style16:not(:first-child), p.style16:not(:first-child) {
-		margin-top: 0.75rem !important;
+		margin-top: 0rem !important;
 	}
 	
 	h1.style16:not(:last-child), h2.style16:not(:last-child), h3.style16:not(:last-child), p.style16:not(:last-child) {
-		margin-bottom: 0.75rem !important;
+		margin-bottom: 0rem !important;
 	}
 	
 	h1.style16, h2.style16, h3.style16, p.style16 {
@@ -2869,16 +2869,16 @@ hr.style1:before {
 	}
 	
 	h1.style29:not(:first-child), h2.style29:not(:first-child), h3.style29:not(:first-child), p.style29:not(:first-child) {
-		margin-top: 0rem !important;
+		margin-top: 0.5625rem !important;
 	}
 	
 	h1.style29:not(:last-child), h2.style29:not(:last-child), h3.style29:not(:last-child), p.style29:not(:last-child) {
-		margin-bottom: 0rem !important;
+		margin-bottom: 0.5625rem !important;
 	}
 	
 	h1.style29, h2.style29, h3.style29, p.style29 {
-		padding-left: calc(4.5rem * var(--indent-left));
-		padding-right: calc(4.5rem * var(--indent-right));
+		padding-left: calc(2.71875rem * var(--indent-left));
+		padding-right: calc(2.71875rem * var(--indent-right));
 		letter-spacing: -0.1rem;
 		width: 100%;
 		font-size: 1.25em;
@@ -3096,9 +3096,10 @@ hr.style1:before {
 	}
 	
 	.container.style2 > .wrapper > .inner {
+		--gutters: 0rem;
 		--padding-horizontal: 1.125rem;
 		--padding-vertical: 0.375rem;
-		--spacing: 0rem;
+		--spacing: 3.625rem;
 	}
 	
 	
@@ -3394,7 +3395,7 @@ hr.style1:before {
 	}
 	
 	#image19 .frame {
-		width: 21rem;
+		width: 18rem;
 	}
 	
 	.buttons.style1 {
@@ -3410,13 +3411,13 @@ hr.style1:before {
 	}
 	
 	.buttons.style1 li a {
-		letter-spacing: 0.225rem;
-		padding-left: calc(0.225rem + 0.75rem);
-		font-size: 1.125em;
+		letter-spacing: 0.25rem;
+		padding-left: calc(0.25rem + 0.625rem);
+		font-size: 1.5em;
 	}
 	
 	.buttons.style1 li a svg {
-		width: 3em;
+		width: 1.875em;
 	}
 }
 
@@ -3434,7 +3435,7 @@ hr.style1:before {
 	}
 	
 	.container.style2 > .wrapper > .inner {
-		--spacing: 0rem;
+		--spacing: 3.625rem;
 	}
 	
 	.container.style10 > .wrapper > .inner {
@@ -3449,14 +3450,8 @@ hr.style1:before {
 		--spacing: 0rem;
 	}
 	
-	.buttons.style1 {
-		flex-direction: column;
-		flex-wrap: nowrap;
-	}
-	
 	.buttons.style1 li a {
-		max-width: 32rem;
-		width: 100%;
+		width: 30rem;
 	}
 }
 
@@ -3472,7 +3467,7 @@ hr.style1:before {
 	}
 	
 	#text102 {
-		font-size: 1em;
+		font-size: 0.875em;
 	}
 	
 	h1.style45, h2.style45, h3.style45, p.style45 {
@@ -3582,9 +3577,10 @@ hr.style1:before {
 	}
 	
 	.container.style2 > .wrapper > .inner {
+		--gutters: 0rem;
 		--padding-horizontal: 0.84375rem;
 		--padding-vertical: 0.28125rem;
-		--spacing: 0rem;
+		--spacing: 3.171875rem;
 	}
 	
 	.container.style10 > .wrapper > .inner {
