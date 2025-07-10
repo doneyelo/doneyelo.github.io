@@ -315,6 +315,62 @@
 				</div>
 			</div>
 		</div>
-		<script src="../assets/main.js"></script>
+		<script>
+// JavaScript simplificado para página independente (sem seções)
+(function() {
+
+	// Função para carregar imagens deferred
+	function loadDeferredImages() {
+		var items = document.querySelectorAll('.deferred img[data-src]');
+		
+		items.forEach(function(img) {
+			if (!img.dataset.src || img.dataset.src === 'done') return;
+			
+			var src = img.dataset.src;
+			var parent = img.closest('.deferred');
+			
+			// Marcar como processado
+			img.dataset.src = 'done';
+			
+			// Preparar para carregamento
+			img.style.opacity = '0';
+			img.style.transition = 'opacity 0.5s ease-in-out';
+			
+			// Quando a imagem carregar
+			img.onload = function() {
+				img.style.opacity = '1';
+				if (parent) {
+					parent.classList.remove('loading');
+				}
+			};
+			
+			// Carregar a imagem
+			img.src = src;
+		});
+	}
+
+	// Quando o DOM estiver pronto
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', function() {
+			document.body.classList.remove('is-loading');
+			setTimeout(loadDeferredImages, 100);
+			
+			// Limpar hash da URL se existir
+			if (window.location.hash) {
+				history.replaceState(null, null, window.location.pathname);
+			}
+		});
+	} else {
+		document.body.classList.remove('is-loading');
+		loadDeferredImages();
+		
+		// Limpar hash da URL se existir
+		if (window.location.hash) {
+			history.replaceState(null, null, window.location.pathname);
+		}
+	}
+
+})();
+		</script>
 	</body>
 </html>
