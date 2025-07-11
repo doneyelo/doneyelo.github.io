@@ -2459,8 +2459,8 @@ hr.style1:before {
 	display: inline-flex;
 	width: auto;
 	height: auto;
-	line-height: 1.5rem;
-	padding: 0 0.625rem;
+	line-height: 1.625rem;
+	padding: 0 0.5rem;
 	vertical-align: middle;
 	font-family: 'Courier New', monospace;
 	font-size: 1em;
@@ -2469,8 +2469,8 @@ hr.style1:before {
 	box-shadow: 0rem 0rem 0.25rem 0.125rem #FFCB00;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
-	padding-bottom: 0.390625rem;
-	padding-top: 0.390625rem;
+	padding-bottom: 0.3125rem;
+	padding-top: 0.3125rem;
 	white-space: normal;
 	align-items: flex-start;
 	transition: transform 0.375s ease, color 0.375s ease, background-color 0.375s ease, border-color 0.375s ease;
@@ -2481,7 +2481,7 @@ hr.style1:before {
 	fill: #000000;
 	flex-grow: 0;
 	flex-shrink: 0;
-	height: 1.5rem;
+	height: 1.625rem;
 	min-width: 16px;
 	pointer-events: none;
 	width: 1em;
@@ -2539,7 +2539,7 @@ hr.style1:before {
 }
 
 #buttons02 .n03 svg {
-	fill: #FFFFFF;
+	fill: #000000;
 }
 
 #buttons02 .n03 {
@@ -3412,7 +3412,7 @@ hr.style1:before {
 	
 	.buttons.style1 li a {
 		letter-spacing: 0.25rem;
-		padding-left: calc(0.25rem + 0.625rem);
+		padding-left: calc(0.25rem + 0.5rem);
 		font-size: 1.5em;
 	}
 	
