@@ -812,7 +812,7 @@ h1.style29 span.p:nth-child(n + 2), h2.style29 span.p:nth-child(n + 2), h3.style
 	margin-top: 1rem;
 }
 
-h1.style4, h2.style4, h3.style4, p.style4 {
+#text01 {
 	text-transform: uppercase;
 	color: #FFCB00;
 	font-family: 'Frank Ruhl Libre', serif;
@@ -826,26 +826,26 @@ h1.style4, h2.style4, h3.style4, p.style4 {
 	-webkit-text-fill-color: transparent;
 }
 
-h1.style4 mark, h2.style4 mark, h3.style4 mark, p.style4 mark {
+#text01 mark {
 	color: #26FFCE;
 	background-color: transparent;
 }
 
-h1.style4 a, h2.style4 a, h3.style4 a, p.style4 a {
+#text01 a {
 	color: #FFFFFF;
 	text-decoration: none;
 }
 
-h1.style4 a:hover, h2.style4 a:hover, h3.style4 a:hover, p.style4 a:hover {
+#text01 a:hover {
 	text-decoration: underline;
 }
 
-h1.style4 span.p:nth-child(n + 2), h2.style4 span.p:nth-child(n + 2), h3.style4 span.p:nth-child(n + 2), p.style4 span.p:nth-child(n + 2) {
+#text01 span.p:nth-child(n + 2) {
 	margin-top: 0.5rem;
 	-webkit-text-fill-color: currentcolor;
 }
 
-h1.style4 span.p, h2.style4 span.p, h3.style4 span.p, p.style4 span.p {
+#text01 span.p {
 	background-image: linear-gradient(154deg, #009440 0%, #FFCB00 69%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent !important;
@@ -2360,10 +2360,6 @@ hr.style1:before {
 	filter: brightness(110.625%);
 }
 
-#image25 {
-	text-align: center;
-}
-
 #image25 .frame {
 	max-width: 100%;
 	width: 230px;
@@ -2459,7 +2455,7 @@ hr.style1:before {
 	display: inline-flex;
 	width: auto;
 	height: auto;
-	line-height: 1.625rem;
+	line-height: 1.75rem;
 	padding: 0 0.5rem;
 	vertical-align: middle;
 	font-family: 'Courier New', monospace;
@@ -2481,7 +2477,7 @@ hr.style1:before {
 	fill: #000000;
 	flex-grow: 0;
 	flex-shrink: 0;
-	height: 1.625rem;
+	height: 1.75rem;
 	min-width: 16px;
 	pointer-events: none;
 	width: 1em;
@@ -2885,11 +2881,19 @@ hr.style1:before {
 		line-height: 1;
 	}
 	
-	h1.style4, h2.style4, h3.style4, p.style4 {
-		letter-spacing: -0.1rem;
+	#text01:not(:first-child) {
+		margin-top: 0rem !important;
+	}
+	
+	#text01:not(:last-child) {
+		margin-bottom: 0rem !important;
+	}
+	
+	#text01 {
+		letter-spacing: 0rem;
 		width: 100%;
 		font-size: 2.25em;
-		line-height: 1.25;
+		line-height: 1;
 	}
 	
 	h1.style10:not(:first-child), h2.style10:not(:first-child), h3.style10:not(:first-child), p.style10:not(:first-child) {
@@ -3514,7 +3518,7 @@ hr.style1:before {
 		font-size: 1.25em;
 	}
 	
-	h1.style4, h2.style4, h3.style4, p.style4 {
+	#text01 {
 		font-size: 2.25em;
 	}
 	

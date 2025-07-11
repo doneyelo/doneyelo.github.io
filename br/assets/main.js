@@ -2286,7 +2286,7 @@
 		onvisible.add('h1.style16, h2.style16, h3.style16, p.style16', { style: 'zoom-in', speed: 500, intensity: 2, threshold: 3, delay: 125, state: true, replay: false });
 		onvisible.add('.buttons.style1', { style: 'zoom-in', speed: 500, intensity: 10, threshold: 1, delay: 0, state: true, replay: false });
 		onvisible.add('.links.style3', { style: 'flip-forward', speed: 1375, intensity: 5, threshold: 3, delay: 0, state: true, replay: false });
-		onvisible.add('h1.style4, h2.style4, h3.style4, p.style4', { style: 'zoom-in', speed: 500, intensity: 2, threshold: 3, delay: 125, state: true, replay: false });
+		onvisible.add('#text01', { style: 'zoom-in', speed: 500, intensity: 2, threshold: 3, delay: 125, state: true, replay: false });
 	
 	// Run ready handlers.
 		ready.run();
