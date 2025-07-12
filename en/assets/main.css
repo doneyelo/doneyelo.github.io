@@ -579,7 +579,7 @@ h1.style14, h2.style14, h3.style14, p.style14 {
 	margin-right: var(--margin-right);
 	--margin-left: auto;
 	--margin-right: auto;
-	color: #00147D;
+	color: #012169;
 	font-family: 'Epilogue', sans-serif;
 	padding-left: 6rem;
 	padding-right: 6rem;
@@ -622,7 +622,7 @@ h1.style14 span.p:nth-child(n + 2), h2.style14 span.p:nth-child(n + 2), h3.style
 	margin-right: var(--margin-right);
 	--margin-left: auto;
 	--margin-right: auto;
-	color: #00147D;
+	color: #012169;
 	font-family: 'Gochi Hand', cursive;
 	padding-left: 6rem;
 	padding-right: 6rem;
@@ -666,12 +666,12 @@ h1.style14 span.p:nth-child(n + 2), h2.style14 span.p:nth-child(n + 2), h3.style
 	margin-right: var(--margin-right);
 	--margin-left: auto;
 	--margin-right: auto;
-	color: #272F75;
+	color: #012169;
 	font-family: 'Epilogue', sans-serif;
 	padding-left: 6rem;
 	padding-right: 6rem;
 	font-size: 1em;
-	line-height: 1;
+	line-height: 1.5;
 	font-weight: 800;
 	text-shadow: 0.088rem 0.088rem 0.75rem #FFFFFF;
 }
